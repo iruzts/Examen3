@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashController;
+use App\Http\Controllers\EmpleadosController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,4 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->resource('dash',DashController::class);
+Route::middleware(['auth:sanctum', 'verified'])->resource('empleados',EmpleadosController::class);
